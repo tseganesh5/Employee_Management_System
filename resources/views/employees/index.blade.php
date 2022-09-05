@@ -18,19 +18,25 @@
                                 <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>Name</th>
+                                        <th>First Name</th>
+                                        <th>Last Name</th>
+                                        <th>Gender</th>
+                                        <th>Date of birth</th>
+                                        <th>Phone</th>
                                         <th>Address</th>
-                                        <th>Mobile</th>
-                                        <th>Actions</th>
+    
                                     </tr>
                                 </thead>
                                 <tbody>
                                 @foreach($employees as $item)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $item->name }}</td>
+                                        <td>{{ $item->first_name }}</td>
+                                        <td>{{ $item->last_name }}</td>
+                                        <td>{{ $item->gender }}</td>
+                                        <td>{{ $item->date_of_birth }}</td>
+                                        <td>{{ $item->phone_number }}</td>
                                         <td>{{ $item->address }}</td>
-                                        <td>{{ $item->mobile }}</td>
                                         <td>
                                             <a href="{{ url('/employee/' . $item->id) }}" title="View Employee"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
                                             <a href="{{ url('/employee/' . $item->id . '/edit') }}" title="Edit Employee"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
